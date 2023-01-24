@@ -1,12 +1,111 @@
 <html>
   <head>
-    <title>shaderheart</title>  
+    <title>shaderheart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            height: 100%;
+            margin:0;
+            }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+      .section {
+        display: flex;
+        width: 100%;
+        height: 25%;
+        text-align: center;
+        align-items: center;
+        background-color: #444;
+        margin: 10px;
+        color: aliceblue;
+        cursor: pointer;
+        background-position: center;
+      }
+
+      .filterAlways {
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        width: 100%;
+            height: 100%;
+      }
+
+      .filterUntilHover {
+          vertical-align: middle;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            -webkit-backdrop-filter: brightness(0.3);
+            backdrop-filter: grayscale() blur(4px) brightness(0.3);
+            transition: backdrop-filter 0.5s;
+            transition: -webkit-backdrop-filter 0.5s;
+      }
+
+      .filterUntilHover:hover {
+            -webkit-backdrop-filter: brightness(0.75);
+            backdrop-filter: brightness(0.75);
+            transition: backdrop-filter 0.5s;
+            transition: -webkit-backdrop-filter 0.5s;
+      }
+
+        .section a{
+            vertical-align: middle;
+            width: 100%;
+            color: aliceblue;
+            text-decoration: none;
+            font-size: 3em;
+            font-family: 'Indie Flower', sans-serif;
+            vertical-align: middle;
+            margin: auto;
+            
+        }
+
+        .bg-image {
+            display: inline;
+            overflow: hidden;
+        }
+
+    </style>
+    
   </head>
   
-  <body>
-    <a href="/shred3">shred3</a>
-    <a href="/shredder">shredder</a>
-    <a href="/nanoshred">nanoshred</a>
+  <body style="height: 100%; background-color: #222;">
+    <div class="section" onclick="location.href='/shred3'" style="background-image: url('shred2copy.png');">
+        <div class="filterAlways">
+            <div class="filterUntilHover">
+                <a href="/shred3">shred3</a>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="section" onclick="location.href='/nanoshred'" style="background-image: url('nanoshred.png');">
+        <div class="filterAlways">
+            <div class="filterUntilHover">
+                <a href="/nanoshred">nanoshred</a>
+            </div>
+        </div>
+    </div>
+    <div class="section" onclick="location.href='/shredder'" style="background-image: url('shredder.png');">
+        <div class="filterAlways">
+            <div class="filterUntilHover">
+                <a href="/shredder">shredder</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" onclick="location.href='/portfolio'" style="background-image: url('output_2_4.png');">
+        <div class="filterAlways">
+            <div class="filterUntilHover">
+                <a href="/portfolio">portfolio</a>
+            </div>
+        </div>
+    </div>
   </body>
   
   
